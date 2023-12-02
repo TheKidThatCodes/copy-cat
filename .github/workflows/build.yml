@@ -1,6 +1,6 @@
 name: Build
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
@@ -26,3 +26,7 @@ jobs:
 
     - name: Lint JS/TS
       run: npm run --silent lint
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v2
+      env:
+        path: build/webMin/
