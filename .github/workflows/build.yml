@@ -28,5 +28,5 @@ jobs:
       run: npm run --silent lint
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v2
-      env:
+      with:
         path: build/webMin/
